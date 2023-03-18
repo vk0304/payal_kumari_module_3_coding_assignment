@@ -11,6 +11,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="javascript.js"></script>
 </head>
 
@@ -20,19 +22,18 @@
             <a class="navbar-brand " href="#">
                 <p> Food , LLC </p>
             </a>
-            
-                <button >
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                
+
+            <button>
+                <i class="fa-solid fa-bars "></i>
+            </button>
 
 
-        
+
     </nav>
 
-    <div class="items text-center dropdown-item">Chicken</div>
-    <div class="items text-center dropdown-item">Beef</div>
-    <div class="items text-center dropdown-item">Sushi</div>
+    <div class="items text-center dropdown-item" style="display: none;">Chicken</div>
+    <div class="items text-center dropdown-item" style="display: none;">Beef</div>
+    <div class="items text-center dropdown-item" style="display: none;">Sushi</div>
 
 
 
@@ -69,7 +70,20 @@
             elit. Repellendus modi et temporibus, iste esse doloribus quis rerum vel. Fuga, quam?
         </section>
     </div>
+    <script>
+        $(document).ready(function () {
 
+            $("button").click(function () {
+                $(".items").toggle();
+                $("button").toggleClass("toggle_button");
+                $("i").toggleClass("toggle_button_elements")         
+
+            });
+
+        });
+            
+
+    </script>
 
 </body>
 
